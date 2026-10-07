@@ -42,15 +42,15 @@ body{
     background-color: red;
     border-radius: 50%;
     box-shadow: inset 0 0 20px black;
-    animation: eyeball 4s linear;
-    
+    animation: har 20s infinite linear;
+    overflow: hidden
 }
 .eyeball-lines {
     height: 100%;
     width: 100%;
     border-radius: 50%;
     background: repeating-conic-gradient(#0000 0deg 7deg, #0003 8deg 10deg, #ffffff12 10deg 12deg);
-    animation: eyeball 4s linear;
+    animation: harline 20s infinite linear;
 }
 .tsagaan{
     background-color: white;
@@ -74,7 +74,7 @@ body{
     height: 115px;
     border-radius: 50%;
     border: 2px black solid;
-    animation: ergeh 15s infinite ease;
+    animation: ergeh 20s infinite linear;
 
 }
 .black {
@@ -103,36 +103,64 @@ body{
     background-color: black;
     position: absolute;
     bottom: 100%;
-    animation: anih 5s infinite linear;
-    z-index: 10;
+    animation: anih 20s infinite linear;
+    z-index: 4;
 }
 @keyframes anih {
-    0%, 20%, 50%{
+    0%, 10%{
         bottom: 100%;
     }
-    70%{
+    17%{
         bottom: 0%;
     }
-    100%{
+    25%, 80%{
         bottom: 100%;
     }
-}
-@keyframes eyeball{
-    0%{ 
-        background-color: black;
-        background: black ;
+    87%{ 
+        bottom: 0%;
     }
-    85%{
-        background-color: black;
-        background: black ;
+    95%, 100%{
+        bottom: 100%;
     }
 }
 
+
 @keyframes ergeh{
-    0%, 20%{
+    0%, 25%{
         transform: translate(-50%, -50%) rotate(0deg);
     }
-    100%{
-        transform: translate(-50%, -50%) rotate(360deg);
+    35%{
+        transform: translate(-50%, -50%) rotate(150deg);
     }
+    50%{
+        transform: translate(-50%, -50%) rotate(880deg);
+    }
+    65%{
+        transform: translate(-50%, -50%) rotate(2010deg);
+    }
+    75%, 100%{
+        transform: translate(-50%, -50%) rotate(2160deg);
+    } 
+}
+@keyframes har{
+    0%, 17%{
+        background-color: black;
+    }
+    18%, 86%{
+        background-color: red;
+    }
+    87%, 100%{
+        background-color: black;}
+}
+@keyframes harline{
+    0%, 17%{
+        background: black;
+    }
+    18%, 86%{
+        background: repeating-conic-gradient(#0000 0deg 7deg, #0003 8deg 10deg, #ffffff12 10deg 12deg);
+    }
+    87%, 100%{
+        background: black;
+    }
+
 }
