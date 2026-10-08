@@ -95,6 +95,17 @@ body{
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 88'%3E%3Cpath fill='%23090509' d='M34 2 C23 17 24 28 39 31 C54 32 63 44 61 59 C59 75 45 83 30 80 C14 78 7 67 9 51 C10 32 20 13 34 2 Z'/%3E%3C/svg%3E") center/cover no-repeat;
     transform: rotate(-90deg);
     position: absolute;
+    opacity: 0;
+    animation: tomoe 20s infinite linear;
+}
+.tomoe1{
+    animation-delay: 0s;
+}
+.tomoe2{
+    animation-delay: 0.5s;
+}
+.tomoe3{
+    animation-delay: 1s;
 }
 .anih{
     width: 460px;
@@ -132,13 +143,13 @@ body{
         transform: translate(-50%, -50%) rotate(150deg);
     }
     50%{
-        transform: translate(-50%, -50%) rotate(880deg);
+        transform: translate(-50%, -50%) rotate(1290deg);
     }
     65%{
-        transform: translate(-50%, -50%) rotate(2010deg);
+        transform: translate(-50%, -50%) rotate(2730deg);
     }
     75%, 100%{
-        transform: translate(-50%, -50%) rotate(2160deg);
+        transform: translate(-50%, -50%) rotate(2880deg);
     } 
 }
 @keyframes har{
@@ -162,4 +173,15 @@ body{
         background: black;
     }
 
+}
+@keyframes tomoe{
+    0%, 23%{
+        opacity: 0;
+    }
+    35%, 65%{
+        opacity: 1;
+    }
+    70%, 100%{
+        opacity: 0;
+}
 }
