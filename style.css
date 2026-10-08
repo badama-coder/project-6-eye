@@ -26,6 +26,7 @@ body{
     position: relative;
     box-shadow: inset 0 0 30px black;
     overflow: hidden;
+    clip-path: border-box;
 }
 .right-eye {
     transform: rotate(5deg) rotateY(180deg);
@@ -36,6 +37,13 @@ body{
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.eyeball-har{
+    background-color: black;
+    height: 195px;
+    width: 195px;
+    border-radius: 50%;
+}
+
 .eyeball{
     height: 195px;
     width: 195px;
@@ -49,7 +57,7 @@ body{
     width: 100%;
     border-radius: 50%;
     background: repeating-conic-gradient(#0000 0deg 7deg, #0003 8deg 10deg, #ffffff12 10deg 12deg);
-    animation: harline 20s infinite linear;
+    /* animation: harline 20s infinite linear; */
 }
 .tsagaan{
     background-color: white;
@@ -99,13 +107,13 @@ body{
     animation: tomoe 20s infinite linear;
 }
 .tomoe1{
-    animation-delay: 0s;
+    animation-delay: 1s;
 }
 .tomoe2{
     animation-delay: 0.5s;
 }
 .tomoe3{
-    animation-delay: 1s;
+    animation-delay: 0s;
 }
 .anih{
     width: 460px;
@@ -140,13 +148,13 @@ body{
         transform: translate(-50%, -50%) rotate(0deg);
     }
     35%{
-        transform: translate(-50%, -50%) rotate(150deg);
+        transform: translate(-50%, -50%) rotate(300deg);
     }
     50%{
-        transform: translate(-50%, -50%) rotate(1290deg);
+        transform: translate(-50%, -50%) rotate(1140deg);
     }
     65%{
-        transform: translate(-50%, -50%) rotate(2730deg);
+        transform: translate(-50%, -50%) rotate(2580deg);
     }
     75%, 100%{
         transform: translate(-50%, -50%) rotate(2880deg);
@@ -154,13 +162,13 @@ body{
 }
 @keyframes har{
     0%, 17%{
-        background-color: black;
+        display: none;
     }
     18%, 86%{
-        background-color: red;
+        display: block;
     }
     87%, 100%{
-        background-color: black;}
+        display: none;}
 }
 @keyframes harline{
     0%, 17%{
